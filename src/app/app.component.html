@@ -1,0 +1,10 @@
+<p>Parent</p>
+<input [(ngModel)]="name" />
+<button (click)="setGrandchild()">Set Grandchild</button>
+<button (click)="hideChild()">Hide example component</button>
+<hr /> 
+<strong>Child:</strong>
+
+<app-example *ngIf="!hide" [name]="name">
+  <p style="color: brown;">Content: {{content}}</p>
+</app-example>

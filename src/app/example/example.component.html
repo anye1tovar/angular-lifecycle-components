@@ -1,0 +1,15 @@
+<p>Current name value: {{name}}</p>
+
+<button style="background-color: green; color: white;" (click)="setName()">Set name from child</button>
+
+<p style="color: purple;" *ngFor="let change of changes">
+    {{change}}
+</p>
+
+<ng-content></ng-content>
+
+<h3>Counter: {{counter.counter}}</h3>
+<button (click)="inc()">Increment</button>
+<button (click)="dec()">Decrement</button>
+
+<app-couter-example #viewChildExample></app-couter-example>
